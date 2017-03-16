@@ -253,7 +253,7 @@ install_grub_uefi()
     echo -n "Installing GRUB-UEFI on $ONIE_BLK_DEV ..."
     grub-install \
         --no-nvram \
-        --bootloader-id="$OPX_BOOT_LABEL"
+        --bootloader-id="$OPX_BOOT_LABEL" \
         --efi-directory='/boot/efi' \
         --boot-directory="$OPX_GRUB_DIR" \
         --recheck $ONIE_BLK_DEV || {
